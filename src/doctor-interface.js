@@ -1,5 +1,5 @@
 // import './styles.css';
-import { getDoctor } from "../src/doctor-logic.js";
+import { doctorData } from "../src/doctor-logic.js";
 import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
