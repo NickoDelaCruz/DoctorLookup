@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 // import fetchResults from "../src/doctor-inteface.js";
 
-function getDoctor(fetchResults, badResults, search, url){
+function getDoctor(placeholder){
 
   let promise = new Promise(function(resolve, reject) {
     let request = new XMLHttpRequest();
