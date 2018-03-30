@@ -6,7 +6,7 @@ import './styles.css';
 
 
 $(document).ready(function() {
-  $('#symptom-button').click(function(event){
+  $('#PLACEHOLDER-BUTTON').click(function(event){
     event.preventDefault();
 
 
