@@ -1,0 +1,16 @@
+
+#header {
+    text-align: center;
+}
+
+#header {
+    width: 400px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+body {
+  background-color: lightsalmon;
+}
