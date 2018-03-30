@@ -5,8 +5,8 @@
   </head>
   <body>
   <div id="header">
-    <h1>Access Doctor Database</h1>
-    <p> Find any doctor in your area </p>
+      <h1>Access Doctor Database</h1>
+      <p> Find any doctor in your area </p>
     <form class="searchBySymptom" method="post">
       <input placeholder="Symptoms">
       <button type="submit" id="symptom-button" name="symptom-button">SEARCH</button>
@@ -14,8 +14,20 @@
   </div>
 
     <div id="reset">
-  <input type="button" value="Reset Search" onClick="window.location.reload()">
+      <input type="button" value="Reset Search" onClick="window.location.reload()">
     </div>
+
+    <div id="list">
+      <h1> LIST: </h1>
+    </div>
+
+    <br>
+
+     <div id="results"></div>
+
+    <br>
+
+      <div id="showErrors"></div>
 
   </body>
 </html>
