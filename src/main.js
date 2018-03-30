@@ -6,8 +6,12 @@ import './styles.css';
 
 
 $(document).ready(function() {
-  $('#PLACEHOLDER-BUTTON').click(function(event){
+  $("#symptom-button").click(function(event){
     event.preventDefault();
+    let symptom = $("#symptom").val();
+      $("#header").hide();
+      $("#results").empty()
+      $("#showErrors").empty()
 
 
 
