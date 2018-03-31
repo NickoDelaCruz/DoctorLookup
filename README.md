@@ -49,7 +49,8 @@ To run program and open in browser:
   - Input: Sam
   - Example output:
 
-https://imgur.com/a/OXade
+
+<kbd><img src="https://imgur.com/a/OXade"></kbd>
 
 
 If no results user get's "NO RESULTS"
