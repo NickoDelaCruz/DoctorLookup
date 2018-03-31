@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import './styles.css';
 import { SymptomSearch } from "./js/symptom-search.js";
-// import { NameSearch } from "./js/name-search.js";
+import { NameSearch } from "./js/name-search.js";
 
 $(document).ready(function() {
   $("#symptom-button").click(function(event){
@@ -39,6 +39,44 @@ $(document).ready(function() {
     },
     function(error) {
       $("#showErrors").text(`No results found. Error Message: ${error.message}`)
+      }
+    )
+  })
+
+  $("#name-button").click(function(event){
+    event.preventDefault();
+    let name = $("#name").val();
+    $("#name").val("");
+    $("#header").hide();
+    $("#results").empty()
+    $("#showErrors").empty()
+    let newNameSearch = new NameSearch;
+    let promise = newNameSearch.getDoctor(name);
+    promise.then(
+      function(response) {
+      let nameSearchList = JSON.parse(response)
+      if(Object.keys(nameSearchList.data).length < 1) {
+        $("#results").append("<h1> NO RESULTS </h1>")
+      } else {
+        for(let i = 0; i < Object.keys(nameSearchList.data).length ; i++) {
+          $("#results").append(
+            "<ul> First Name: " + nameSearchList.data[i].profile.first_name + "</ul>"
+            + "<ul> Last Name: " + nameSearchList.data[i].profile.last_name + "</ul>"
+
+            + "<ul> Address: " + nameSearchList.data[i].practices[0].visit_address.street + "</ul>"
+            + "<ul> City: " + nameSearchList.data[i].practices[0].visit_address.city + "</ul>"
+            + "<ul> State: " + nameSearchList.data[i].practices[0].visit_address.state  + "</ul>"
+            + "<ul> ZIP: " + nameSearchList.data[i].practices[0].visit_address.zip + "</ul>"
+
+            + "<ul> Phone: " + nameSearchList.data[i].practices[0].phones[0].number + "</ul>"
+            + "<ul> Accepting New Patients: " + nameSearchList.data[i].practices[0].accepts_new_patients + "</ul>"
+            + "<ul> Website :" + nameSearchList.data[i].practices[0].website + "</ul>"
+            + "<ul> Speciality: " + nameSearchList.data[i].specialties[0].name + "</ul>"
+          )}
+        }
+      },
+      function(error) {
+        $("#showErrors").append(`Opps something went wrong: ${error.message}`)
       }
     )
   })
