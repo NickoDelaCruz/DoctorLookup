@@ -37,9 +37,7 @@ $(document).ready(function() {
         }
       }
     },
-    function(error) {
-      $("#showErrors").text(`No results found. Error Message: ${error.message}`)
-      }
+
     )
   })
 
