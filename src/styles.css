@@ -1,9 +1,9 @@
 
-#header, #reset, #list {
+#header, #reset, #list, #results {
     text-align: center;
 }
 
-#header, #reset, #list {
+#header, #reset, #list, #results {
     width: 400px;
     text-align: left;
     margin-left: auto;
