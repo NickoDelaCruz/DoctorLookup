@@ -38,7 +38,7 @@ $(document).ready(function() {
       }
     },
     function(error) {
-      $("#showErrors").text(`No results found. Error Message: ${error.message}`)
+      $("#showErrors").text(`Opps, something went wrong: ${error.message}`)
       }
     )
   })
@@ -60,6 +60,7 @@ $(document).ready(function() {
       } else {
         for(let i = 0; i < Object.keys(nameSearchList.data).length ; i++) {
           $("#results").append(
+            "<div class='w3'>" + "<img src='" + nameSearchList.data[i].profile.image_url + "'>" + "</div>"  +
             "<ul> First Name: " + nameSearchList.data[i].profile.first_name + "</ul>"
             + "<ul> Last Name: " + nameSearchList.data[i].profile.last_name + "</ul>"
 
