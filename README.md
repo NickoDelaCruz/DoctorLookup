@@ -32,7 +32,7 @@ To run program and open in browser:
 
 ## Functionality
 
-* User can search local doctors by medical issue.
+* User can search local doctors by medical issue or Doc Name.
   - Input: cough
   - Example output:
 
@@ -45,12 +45,23 @@ To run program and open in browser:
   Accepting New Patients: true
   Website: undefined or www.example.com
 
-* User can search local doctors by name.
   - Input: Sam
   - Example output:
 
 
-<kbd><img src="https://imgur.com/a/OXade"></kbd>
+  (Profile Picture)
+
+  First Name: Samuel
+  Last Name: Shiley
+  Address: 9205 SW Barnes Rd
+  City: Portland
+  State: OR
+  ZIP: 97225
+  Phone: 5032161234
+  Accepting New Patients: true
+  Website: undefined or www.example.com
+  Speciality: Otolaryngology
+
 
 
 If no results user get's "NO RESULTS"
@@ -72,6 +83,6 @@ Accepting new patients is either true or false (cant find a doc with false) but 
 
 ## License
 
-OSx
+OS
 
 Copyright (c) 2018 NickoDC
