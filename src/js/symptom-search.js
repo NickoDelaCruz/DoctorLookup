@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 export class SymptomSearch{
-  getDoctors(symptom){
+  getDoctor(symptom){
     return new Promise(function(resolve, reject) {
       const key = process.env.exports.apiKey;
       let request = new XMLHttpRequest()
